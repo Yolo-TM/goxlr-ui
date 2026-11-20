@@ -39,6 +39,7 @@ export default {
             unchanged: "Keep profile setting",
             override: "Set on page change",
             muteLighting: "Lighting",
+            autoText: "Channel name",
         },
 
         // For these, the keys map directly to their GoXLR Channel Names

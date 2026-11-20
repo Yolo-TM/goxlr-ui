@@ -322,7 +322,8 @@ export default {
     onScribbleTextApplied() {
       let entry = this.getEntry();
       if (entry.scribble === null) return;
-      entry.scribble.text = this.textValue;
+      // Empty means 'show the channel name' (handled by the daemon)
+      entry.scribble.text = this.textValue === "" ? null : this.textValue;
       this.save(entry);
     },
   }
@@ -377,7 +378,8 @@ export default {
             <div style="color: #fff; margin-bottom: 8px">{{ $t('message.lighting.mixer.screen.options.text') }}:</div>
             <input type="text" v-model="textValue" @blur="onScribbleTextApplied"
                    v-on:keyup.enter="onScribbleTextApplied"
-                   :aria-label="$t('message.lighting.mixer.screen.options.text')"/>
+                   :aria-label="$t('message.lighting.mixer.screen.options.text')"
+                   :placeholder="$t('message.faderPaging.autoText')"/>
           </div>
         </CheckSelection>
         <template v-if="hasScribble()">
