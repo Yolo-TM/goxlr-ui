@@ -23,6 +23,50 @@
 
 export default {
     message: {
+        // Sampler Pad Actions, a sampler pad runs an action instead of playing a sample
+        samplerActions: {
+            title: "Sampler Pad Actions",
+            general: "General",
+            enable: "Enable Pad Actions",
+            blocked: "Network access is enabled, so launching programs is disabled. Switch off network access (System tab) to use Launch / Open actions.",
+            bankTitle: "Bank",
+            everyBank: "Every bank",
+            padTitle: "Pad",
+            pads: {
+                TopLeft: "Top left",
+                TopRight: "Top right",
+                BottomLeft: "Bottom left",
+                BottomRight: "Bottom right",
+            },
+            actionTitle: "Action",
+            typeTitle: "Type",
+            types: {
+                None: "Normal sampler pad",
+                Launch: "Start an application",
+                Open: "Open a URL / file",
+                SwitchEffectPreset: "Switch effect preset",
+                SwitchProfile: "Switch profile",
+                Macro: "GoXLR commands",
+                Command: "GoXLR command",
+            },
+            commandLine: "Command line",
+            workingDir: "Working directory (optional)",
+            target: "URL or file",
+            commandsJson: "Commands (JSON list)",
+            invalidJson: "The commands aren't valid:",
+            presetTitle: "Effect preset",
+            preset: "Preset {n}",
+            profileKind: "Profile type",
+            micProfile: "Mic profile",
+            profileTitle: "Profile",
+            save: "Save",
+            test: "Test",
+            clear: "Clear",
+            saved: "Saved",
+            overviewTitle: "Configured pads",
+            none: "No pad actions configured yet.",
+        },
+
         // Fader Paging, the Sampler Banks double as pages for the faders
         faderPaging: {
             title: "Fader Paging",
@@ -118,6 +162,7 @@ export default {
             effects: "Effects",
             sampler: "Sampler",
             faderPaging: "Fader Paging",
+            samplerActions: "Pad Actions",
             lighting: "Lighting",
             routing: "Routing",
             system: "System",

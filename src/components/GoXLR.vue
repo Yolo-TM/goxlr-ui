@@ -44,6 +44,11 @@
             <FaderPaging/>
           </ContentContainer>
         </Tab>
+        <Tab id="sampleractions" v-if="!isDeviceMini()" :name="$t('message.navigation.samplerActions')">
+          <ContentContainer>
+            <SamplerActions/>
+          </ContentContainer>
+        </Tab>
         <Tab id="lighting" :name="$t('message.navigation.lighting')">
           <LightingTab ref="lighting" @on-lighting-changed="onLightingDataChange"/>
         </Tab>
@@ -144,6 +149,7 @@ import {isDeviceMini} from "@/util/util";
 import LightingTab from "@/components/sections/lighting/LightingTab.vue";
 import SamplerTab from "@/components/sections/SamplerTab.vue";
 import FaderPaging from "@/components/sections/FaderPaging.vue";
+import SamplerActions from "@/components/sections/SamplerActions.vue";
 import ContentContainer from "@/components/containers/ContentContainer.vue";
 import CenteredContainer from "@/components/containers/CenteredContainer.vue";
 import GoXLRVisualiser from "@/components/visualisation/GoXLRVisualiser.vue";
@@ -167,6 +173,7 @@ export default {
     ContentContainer,
     SamplerTab,
     FaderPaging,
+    SamplerActions,
     LightingTab,
     EffectsTab,
     FileTabs,
