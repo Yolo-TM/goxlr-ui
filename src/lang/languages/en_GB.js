@@ -23,6 +23,24 @@
 
 export default {
     message: {
+        // Fader Paging, the Sampler Banks double as pages for the faders
+        faderPaging: {
+            title: "Fader Paging",
+            general: "General",
+            enable: "Enable Fader Paging",
+            pageTitle: "Page (Sampler Bank)",
+            bank: "Bank {bank}",
+            capture: "Store current faders in this page",
+            apply: "Preview this page now",
+            clear: "Clear this fader",
+            faderTitle: "Faders on Page {bank}",
+            faderSelect: "Fader",
+            channel: "Channel",
+            unchanged: "Keep profile setting",
+            override: "Set on page change",
+            muteLighting: "Lighting",
+        },
+
         // For these, the keys map directly to their GoXLR Channel Names
         channels: {
             All: "All",
@@ -98,6 +116,7 @@ export default {
             configuration: "Configuration",
             effects: "Effects",
             sampler: "Sampler",
+            faderPaging: "Fader Paging",
             lighting: "Lighting",
             routing: "Routing",
             system: "System",
